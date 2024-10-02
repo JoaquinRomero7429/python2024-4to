@@ -6,8 +6,8 @@ def pedir_datos_personaje(num):
     nombre = input("Nombre: ")
     altura = float(input("Altura: "))
     velocidad = float(input("Velocidad: "))
-    resistencia = float(input("Resistencia: "))
-    fuerza = float(input("Fuerza: "))
+    resistencia = float(input("Resistencia:(0/30)"))
+    fuerza = float(input("Fuerza: (30/60) "))
     return Personaje(nombre, altura, velocidad, resistencia, fuerza)
 
 def mostrar_menu():
