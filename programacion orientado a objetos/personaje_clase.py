@@ -12,7 +12,7 @@ class Personaje:
         self.vida = Personaje.vida 
 
     def atacar(self, otro_personaje):
-        "Permite que un personaje ataque a otro."
+
         if not self.estado:
             print(f"{self.nombre} está muerto y no puede atacar.")
             return
@@ -29,7 +29,7 @@ class Personaje:
         print (f"{otro_personaje.nombre} le queda {self.vida} puntos de vida ")
 
     def recibir_dano(self, cantidad):
-        "Reduce la resistencia del personaje según la cantidad de daño recibido."
+        
         self.vida -= cantidad #cantidad = dano = fuerza-resistencia
         if self.vida <= 0:
             self.vida = 0
@@ -39,7 +39,7 @@ class Personaje:
             print(f"{self.nombre} ha recibido {cantidad} de daño. Vida restante: {self.vida}")
 
     def mostrar_info(self):
-        "Muestra en pantalla todos los atributos del personaje."
+        
         estado_texto = "Vivo" if self.estado else "Muerto"
         print(f"Nombre: {self.nombre}, Altura: {self.altura}, Velocidad: {self.velocidad}, "
               f"Resistencia: {self.resistencia}, Fuerza: {self.fuerza}, Estado: {estado_texto}")
